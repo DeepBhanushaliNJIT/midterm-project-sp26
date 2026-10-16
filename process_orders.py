@@ -18,7 +18,7 @@ def build_customers(orders):
 
 
 def build_items(orders):
-    """Map each item name to its price and the number of times it was ordered."""
+    """Map each item name to its price and how many times it was ordered."""
     prices = {}
     counts = Counter()
     for order in orders:
@@ -26,7 +26,8 @@ def build_items(orders):
             prices[item["name"]] = item["price"]
             counts[item["name"]] += 1
     return {
-        name: {"price": prices[name], "orders": counts[name]} for name in prices
+        name: {"price": price, "orders": counts[name]}
+        for name, price in prices.items()
     }
 
 
