@@ -1,4 +1,5 @@
 # Dosa Restaurant Order Processor
+
 A dosa restaurant has a year of individual orders saved in a JSON file, but nothing else. This script reads that file and builds two summaries from it: a list of customers and a list of menu items with how often each one was ordered.
 
 ## What it produces
@@ -84,8 +85,8 @@ The `if __name__ == "__main__":` guard at the bottom means the functions can be 
 ## Files in this repo
 
 | File | Purpose |
-| --- | --- |
+
 | `process_orders.py` | The script |
 | `example_orders.json` | Sample orders to test with |
 | `README.md` | This file |
-.
+| .gitignore | Keeps the generated JSON files out of the repo |
